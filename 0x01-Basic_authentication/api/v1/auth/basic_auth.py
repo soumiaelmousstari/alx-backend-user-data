@@ -4,6 +4,7 @@
 import re
 from .auth import Auth
 from models.user import User
+from typing import Tuple
 import base64
 import binascii
 
