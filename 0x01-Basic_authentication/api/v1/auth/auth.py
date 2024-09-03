@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Authentication module for the API.
 """
+import re
 from typing import List, TypeVar
 from flask import request
 
@@ -20,6 +21,8 @@ class Auth:
                     pattern = '{}/*'.format(exclusion_path[0:-1])
                 else:
                     pattern = '{}/*'.format(exclusion_path)
+                if re.match(pattern, path):
+                    return False
         return True
 
     def authorization_header(self, request=None) -> str:
