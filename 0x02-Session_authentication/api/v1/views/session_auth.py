@@ -3,10 +3,8 @@
 """
 import os
 from typing import Tuple
-from flask import abort, jsonify, request
-
+from flask import jsonify, request
 from models.user import User
-from api.v1.views import app_views
 
 
 @app_views.route('/auth_session/login', methods=['POST'], strict_slashes=False)
