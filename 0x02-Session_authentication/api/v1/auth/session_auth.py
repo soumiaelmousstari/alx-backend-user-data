@@ -2,6 +2,7 @@
 """Session authentication module for the API.
 """
 from .auth import Auth
+from uuid import uuid4
 
 
 class SessionAuth(Auth):
